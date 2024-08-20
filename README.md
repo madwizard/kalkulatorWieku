@@ -1,0 +1,2 @@
+# kalkulatorWieku
+Prosty kalkulator wieku
