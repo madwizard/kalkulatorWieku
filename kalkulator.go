@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"fyne.io/fyne/v2"
 	"time"
 
 	"fyne.io/fyne/v2/app"
@@ -43,12 +44,13 @@ func main() {
 	a := app.New()
 	w := a.NewWindow("Kalkulator wieku")
 	w.Resize(fyne.NewSize(400, 200))
+	today := time.Now().Local()
 
 	// Create date entry widgets
 	startDateEntry := widget.NewEntry()
 	startDateEntry.SetPlaceHolder("RRRR-MM-DD")
 	endDateEntry := widget.NewEntry()
-	endDateEntry.SetPlaceHolder("RRRR-MM-DD")
+	endDateEntry.SetText(today.Format("2006-01-02"))
 
 	// Label to display the result
 	resultLabel := widget.NewLabel("Różnica: ")
