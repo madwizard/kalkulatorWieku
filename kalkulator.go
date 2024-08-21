@@ -41,7 +41,7 @@ func dateDifference(start, end time.Time) (years, months, days int) {
 
 func main() {
 	// Create a new application
-	a := app.New()
+	a := app.NewWithID("github.com/madwizard/kalkulatorWieku")
 	w := a.NewWindow("Kalkulator wieku")
 	w.Resize(fyne.NewSize(400, 200))
 	today := time.Now().Local()
